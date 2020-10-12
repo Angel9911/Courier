@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2C884F7B-58B0-EA5A-D69C-DCCCD430F9EB" name="Status_na_pratka">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>0626AF15-C77E-F912-D31E-C0F12329E552</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_status" id="B2FD3907-9F5D-B6D2-296D-92DFDED84851">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>A8D0C2BB-DEB7-6360-BE28-E69FB31A6058</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="type_status_package" id="487CFAF3-54D5-865C-C3D2-82FD496E2027">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>C3918A34-E361-B235-9B34-6FD81F3BDA99</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2CCCF392-FD68-FD6D-817F-DCEFEEC181C1" name="Status_na_pratka_PK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>F60C7EA0-02F8-0C75-16E8-8CC8F7A7B2AB</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B2FD3907-9F5D-B6D2-296D-92DFDED84851"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

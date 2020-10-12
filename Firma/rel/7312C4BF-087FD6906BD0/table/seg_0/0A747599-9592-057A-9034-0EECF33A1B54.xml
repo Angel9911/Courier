@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A747599-9592-057A-9034-0EECF33A1B54" name="Kurier">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>06E5EC1D-8BB4-CE01-E0EE-9B4E9C15850E</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_courier" id="D2337A03-FEBA-D225-059F-42F9A4798E3D">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>FF018133-5995-DFE3-E177-D2BA36569189</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name_courier" id="8AA08741-B6A3-3E7D-2515-A12E29ACFECE">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>A1FF1EE8-1554-7328-32A5-7183287990EC</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_package" id="EE0733DA-CC40-9A56-3D5C-B8AEE4CD93B9">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>CAF1C2B4-AE0F-0259-18E6-CF9034C11527</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_office" id="4A099D6B-39C7-AAA5-3D04-BDF6ADB907DA">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>1E4250DF-CFD2-54E1-24E4-E1871F051D87</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Office_ID_office" id="2D5882DD-ED39-6F58-277E-166234C433B9">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 16:23:35 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05F4262D-28D9-CCAB-3D01-10015EEFB973" referredColumn="DCF1797D-8E30-4C9D-C461-F56CA1DEF54B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="554EC47B-8D31-DF5C-C152-7B6FC9A1C0AE" name="Kurier_PK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>9C59E7B1-7EBD-5503-4230-19EDC284FE70</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2337A03-FEBA-D225-059F-42F9A4798E3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84BF51E4-3CC1-BEEA-E08F-B2E68428D530" name="Kurier__IDX">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>45CD0632-6826-F3A0-663B-46E3D5B5FAC4</relationGeneratorID>
+</ind_PK_UK>
+<ind_PK_UK id="84727D13-BBAE-3AF5-BDA1-BCE7AB6114A8" name="Kurier_Office_FK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 16:23:35 UTC</createdTime>
+<generatorID>7DB627E3-2331-D7BE-2E3B-B9EFC54CD1FE</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D5882DD-ED39-6F58-277E-166234C433B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

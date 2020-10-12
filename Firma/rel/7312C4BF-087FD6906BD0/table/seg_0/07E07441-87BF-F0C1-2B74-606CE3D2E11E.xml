@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="07E07441-87BF-F0C1-2B74-606CE3D2E11E" name="Klienti">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:34 UTC</createdTime>
+<generatorID>9A168151-2B6F-1833-690D-2C7E1B48A434</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_client" id="B7DBB035-D39C-DD48-90F3-93F674971C85">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>C48EFE07-7BCA-66B2-6BD2-0D057556160C</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name_client" id="09700DBF-23BC-DD00-C29B-2DAC8B8C1D27">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>79502AF8-E0DB-05B7-8213-67D9E2B58A65</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EGN_client" id="EB463734-37E2-D822-1066-0C74032D836D">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>7EB10787-FE26-8DF0-F139-8F10442876E0</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_package" id="1A14CFD3-8CCA-A37B-41CC-4C8BFCC48059">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>7F0D0645-9C55-BAD0-1E11-C9C03FEF5B7A</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tel_number" id="871166FF-D369-9011-A270-3BBE58A046D1">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>E55CF127-834A-CC17-E88C-6B60BE956FE5</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0E179B80-10F9-1E3A-D6E9-7AA1CCFFE15F" name="Klienti_PK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>A9A800F5-F537-E532-7434-2B51B2A50CEA</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7DBB035-D39C-DD48-90F3-93F674971C85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

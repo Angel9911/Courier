@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DB114D4-FD5D-343A-197E-6088B794AD66" name="Transport_package">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>3D81CD2E-2CF4-174A-9844-4B624F82FBD9</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_Transport" id="99397922-5F68-C19B-E054-650AFAE5D726">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>602BA894-CD46-8BAB-A5B4-40A827E127D7</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_package" id="E8BC3380-16BA-45E5-7356-FFB972769AA3">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>65857450-8C86-5168-5BE3-5126ACC545F4</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="From" id="187FA9E4-685D-6B28-EFCF-DD9D22FC6C29">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>27E1A65D-D01E-26E8-54AB-02C47154B36D</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="To" id="64FF2F9E-C4D3-1749-15AF-A80AB824F8A1">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>46EE20C5-B12D-FEE4-4406-A52015A73B10</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Kurier_ID_courier" id="C8BE16B9-C6FB-8416-0844-6C98680B80D8">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 16:22:24 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7ED0E61-3327-978E-0FB3-14F69852F3A5" referredColumn="D2337A03-FEBA-D225-059F-42F9A4798E3D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="87357F0E-B12B-6791-8207-5C735BC9A30E" name="Transport_package_PK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 15:13:35 UTC</createdTime>
+<generatorID>201312AE-1174-3BA1-4186-1C51FDDA7E7F</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99397922-5F68-C19B-E054-650AFAE5D726"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A872AE7D-667E-B7FC-30D4-FA0BA8CDEA7C" name="Transport_package_Kurier_FK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 16:22:24 UTC</createdTime>
+<generatorID>9C59E7B1-7EBD-5503-4230-19EDC284FE70</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8BE16B9-C6FB-8416-0844-6C98680B80D8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
