@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0626AF15-C77E-F912-D31E-C0F12329E552" name="Status na pratka">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-07 12:10:59 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_status" id="A8D0C2BB-DEB7-6360-BE28-E69FB31A6058">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-07 13:24:19 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="type_status_package" id="C3918A34-E361-B235-9B34-6FD81F3BDA99">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-07 13:24:34 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_package" id="73D60508-CDC4-5113-C858-A2E374DB40BB">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-08 15:52:06 UTC</createdTime>
+<generatorID>73743CCA-0C47-EDBB-DDF8-007DD9046C6E</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<referedAttribute>BE91C6A9-F13B-CE1B-6E9F-5C2B8CF6FC75</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F60C7EA0-02F8-0C75-16E8-8CC8F7A7B2AB" name="Status na pratka PK">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-07 13:28:47 UTC</createdTime>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A8D0C2BB-DEB7-6360-BE28-E69FB31A6058</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
