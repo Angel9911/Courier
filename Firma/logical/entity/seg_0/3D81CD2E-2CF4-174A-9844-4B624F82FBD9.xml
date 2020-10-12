@@ -22,7 +22,9 @@
 <engineerTo>
 <item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
 </engineerTo>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_package" id="65857450-8C86-5168-5BE3-5126ACC545F4">
@@ -33,7 +35,9 @@
 <item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="From" id="27E1A65D-D01E-26E8-54AB-02C47154B36D">
@@ -44,7 +48,9 @@
 <item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="To" id="46EE20C5-B12D-FEE4-4406-A52015A73B10">
@@ -55,7 +61,23 @@
 <item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_courier" id="AD5D86E6-A3BE-A4B9-86AF-E1BC0595ED0F">
+<createdBy>Acer</createdBy>
+<createdTime>2020-10-12 13:27:35 UTC</createdTime>
+<generatorID>5E663505-C3F2-F30C-8899-6BD6AFB2FC6A</generatorID>
+<ownerDesignName>Firma</ownerDesignName>
+<engineerTo>
+<item key="7650CC95-5DD5-1C7A-190F-B79B6BD310B6" value="true"/>
+</engineerTo>
+<referedAttribute>FF018133-5995-DFE3-E177-D2BA36569189</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
