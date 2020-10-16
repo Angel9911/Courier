@@ -84,14 +84,6 @@
 <colUsage columnID="D2337A03-FEBA-D225-059F-42F9A4798E3D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="84BF51E4-3CC1-BEEA-E08F-B2E68428D530" name="Kurier__IDX">
-<createdBy>Acer</createdBy>
-<createdTime>2020-10-12 15:13:35 UTC</createdTime>
-<ownerDesignName>Firma1</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>45CD0632-6826-F3A0-663B-46E3D5B5FAC4</relationGeneratorID>
-</ind_PK_UK>
 <ind_PK_UK id="84727D13-BBAE-3AF5-BDA1-BCE7AB6114A8" name="Kurier_Office_FK">
 <createdBy>Acer</createdBy>
 <createdTime>2020-10-12 16:23:35 UTC</createdTime>
