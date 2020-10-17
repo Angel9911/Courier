@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E1338EFB-5BC3-EF52-97DD-E9327C05D10F" name="Client">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="606BF7C3-21EF-42FB-49AD-3BDCF9D8DACA" name="Office">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-07 12:06:29 UTC</createdTime>
+<createdTime>2020-10-17 12:52:40 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_client" id="F651CE4D-FD1D-1A9A-B684-063E8E49224D">
+<Attribute name="ID_office" id="129B30A6-94FA-1A6D-0D3D-A24F74FB019E">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 12:46:07 UTC</createdTime>
+<createdTime>2020-10-17 12:52:44 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
@@ -27,9 +27,9 @@
 <logicalDatatype>LOGDT027</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Name_client" id="31395A1E-5064-C9BE-DE12-8E1B360F522B">
+<Attribute name="Location_office" id="A45E3E91-1FE0-0488-D284-FFAB8062185F">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 12:46:21 UTC</createdTime>
+<createdTime>2020-10-17 12:52:56 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
@@ -38,12 +38,12 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EGN_client" id="F838455E-E708-6D4F-4A55-C1567D97163E">
+<Attribute name="Open_office" id="79E9277E-4E3D-5521-24F5-5F6484B3437E">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 12:46:36 UTC</createdTime>
+<createdTime>2020-10-17 12:53:10 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
@@ -51,13 +51,12 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Phone_client" id="713500FE-CF30-603C-F9B4-9D76AE423CB3">
+<Attribute name="Close_office" id="664A7E7F-04E6-9CD4-0C04-65A79E021AEF">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 12:46:47 UTC</createdTime>
+<createdTime>2020-10-17 12:53:28 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
@@ -65,22 +64,21 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2C54164A-6F30-665E-4214-0D2F545A6D05" name="Client PK">
+<identifier id="81C9FA95-EA51-5931-0B08-77A81C7E3368" name="Office PK">
 <createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 12:49:24 UTC</createdTime>
+<createdTime>2020-10-17 12:52:51 UTC</createdTime>
 <ownerDesignName>Courier</ownerDesignName>
 <engineerTo>
 <item key="1B094C1F-98DE-C617-5D04-5D33E4670EA2" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>F651CE4D-FD1D-1A9A-B684-063E8E49224D</attributeRef>
+<attributeRef>129B30A6-94FA-1A6D-0D3D-A24F74FB019E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

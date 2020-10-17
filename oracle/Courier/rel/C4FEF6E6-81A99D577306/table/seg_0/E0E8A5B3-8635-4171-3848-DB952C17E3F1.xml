@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E0E8A5B3-8635-4171-3848-DB952C17E3F1" name="Office">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>606BF7C3-21EF-42FB-49AD-3BDCF9D8DACA</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_office" id="C32FD7CF-8AB6-97BD-5219-0AF15E433684">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>129B30A6-94FA-1A6D-0D3D-A24F74FB019E</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Location_office" id="EF894559-2B1B-F9CC-59FF-CECCFD2390BF">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>A45E3E91-1FE0-0488-D284-FFAB8062185F</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Open_office" id="AA22C918-2493-6974-358C-00652AF38AD4">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>79E9277E-4E3D-5521-24F5-5F6484B3437E</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Close_office" id="BFB835BE-2D68-B4C4-A6EF-2BF2D1D70807">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>664A7E7F-04E6-9CD4-0C04-65A79E021AEF</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB0D048D-5F11-E92B-9D67-51EF2D582ADA" name="Office_PK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>81C9FA95-EA51-5931-0B08-77A81C7E3368</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C32FD7CF-8AB6-97BD-5219-0AF15E433684"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

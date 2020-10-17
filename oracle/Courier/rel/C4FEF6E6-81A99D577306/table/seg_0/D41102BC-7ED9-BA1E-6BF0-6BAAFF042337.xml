@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D41102BC-7ED9-BA1E-6BF0-6BAAFF042337" name="Registry">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>D983DFD3-6F98-0303-51CE-5E1856F7D61F</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_registry" id="37FCF7E4-D87E-FE8D-75AC-9A8D15D5823F">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>CF9D7849-D7B0-D8E9-57DF-284D51FC21B2</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date_registry" id="EFDB054B-2779-CEBC-6C6A-DB8D12124BE1">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>92997A69-D132-9112-1C6A-6E69D30D8193</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Client_ID_client" id="F526E291-F321-FA40-9E46-A1B25F9DD907">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>4859BB58-1468-F3B7-4459-52B622105989</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4AD99763-928D-CAD5-48B7-8288CEEBEDDD" referredColumn="FC64ADAF-F5DC-A20D-3AB2-2F1C66D60314"/>
+</associations>
+</Column>
+<Column name="Courier_ID_courier" id="771E61A2-2C80-399F-5A85-46F0A63964DE">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>07F68632-8182-0B74-5A78-298CE16790EB</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4FE9AFA1-C6D7-9F65-F958-8A39C2C81632" referredColumn="610C6D93-FA50-9801-AB6A-44034C25CAFC"/>
+</associations>
+</Column>
+<Column name="Transport_package_ID_transport_package" id="A10D6CB3-5557-E1AF-1692-12CF09ECBB95">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>670ED145-D4E8-8F7B-88A1-4BF604C6C534</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7558C23A-7947-54E3-E504-0DA999F770E3" referredColumn="6146E329-5817-EF40-77F1-5383C35110D5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="767D109D-00DE-F741-AE9D-9765D7545353" name="Registry_PK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>963C265B-E420-CF9D-8018-6828FEDD0DFC</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37FCF7E4-D87E-FE8D-75AC-9A8D15D5823F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25A1B6F7-14C3-0A9D-F03B-3CAE26959581" name="Registry_Client_FK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>A471D7C9-03BD-7952-1D24-1CE231100AB3</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F526E291-F321-FA40-9E46-A1B25F9DD907"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E68F3568-BD4A-1AFA-1050-BC3BAA6B0C4E" name="Registry_Courier_FK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>FAC92937-0A86-6779-FA15-517A545DEC99</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="771E61A2-2C80-399F-5A85-46F0A63964DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D53AB721-559C-C57D-EA51-C5A2A60F530D" name="Registry_Transport_package_FK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:58 UTC</createdTime>
+<generatorID>6F95D06F-06BE-4F2B-239C-76C3B2968613</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A10D6CB3-5557-E1AF-1692-12CF09ECBB95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

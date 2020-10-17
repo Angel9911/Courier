@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="57814BE9-BD36-02AB-51CB-105DEFED34F8" name="Package">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 12:51:02 UTC</createdTime>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_package" id="D3069858-F572-225F-D135-3F974074C42C">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 12:51:07 UTC</createdTime>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name_package" id="EB357A7E-7C4D-7E47-488D-82EF857193EC">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 12:51:16 UTC</createdTime>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_type_package" id="BC30D98E-D848-AE67-BE0F-447225E794BC">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:11:39 UTC</createdTime>
+<generatorID>C6B7B4E7-C029-0615-E6C4-18BEE320A84D</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<referedAttribute>419F0630-8440-5563-399C-D79539ADCDF1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_status_package" id="9BEA21CA-36C4-AA95-DF54-3F29B4421153">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:12:02 UTC</createdTime>
+<generatorID>70390636-95E8-9258-B2F4-304B4CBB0942</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<referedAttribute>6EDC91CE-4618-A905-89D1-2601EECBEB65</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_registry" id="B6541C65-C5E4-2DCF-0402-E580875672FD">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:15:39 UTC</createdTime>
+<generatorID>4A9EC9F6-850F-DBC4-E0B5-7759DFECAC69</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<referedAttribute>CF9D7849-D7B0-D8E9-57DF-284D51FC21B2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_info_pakage" id="A4A189A0-0E40-F5E1-5ABB-EE3BC3E51531">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 13:16:52 UTC</createdTime>
+<generatorID>46FBDAB9-7C87-3F95-EB17-1D955537B35F</generatorID>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<referedAttribute>85EEACA1-43DC-92C1-3EF0-71424ED58890</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="13EA8DF3-FFAD-245B-134A-B11CE630B553" name="Package PK">
+<createdBy>Bobby</createdBy>
+<createdTime>2020-10-17 12:51:38 UTC</createdTime>
+<ownerDesignName>Courier</ownerDesignName>
+<engineerTo>
+<item key="C4FEF6E6-A497-2E2E-5AAE-81A99D577306" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D3069858-F572-225F-D135-3F974074C42C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
