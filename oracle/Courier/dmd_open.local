@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <design id="488D789C-ABC0-ECC5-2C89-5A7E4FC46B5B">
 	<models>
-<<<<<<< Updated upstream
 		<model id="FE47A0C3-9064-FCE6-7AA5-1EA2D82CA478" open="true" open_d_pm="true"/>
-=======
-		<model id="1FEE8CB6-2E81-2415-A4F5-8116CD627D20" open="true" open_d_pm="true"/>
->>>>>>> Stashed changes
 	</models>
 </design>
