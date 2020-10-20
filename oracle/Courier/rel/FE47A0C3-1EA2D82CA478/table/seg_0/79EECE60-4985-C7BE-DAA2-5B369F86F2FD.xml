@@ -27,11 +27,12 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Type_package_ID_type_package" id="AD9365B0-8EFF-4B95-7A0B-5C31AB74FD99">
+<Column name="Type_package_ID" id="AD9365B0-8EFF-4B95-7A0B-5C31AB74FD99">
 <createdBy>Bobby</createdBy>
 <createdTime>2020-10-17 13:24:34 UTC</createdTime>
 <generatorID>BC30D98E-D848-AE67-BE0F-447225E794BC</generatorID>
@@ -46,7 +47,7 @@
 <colAssociation fkAssociation="568DCAF1-3956-7060-3467-404C40EC8C7C" referredColumn="A376A107-498F-E665-57BB-CAEFDC8FE1B1"/>
 </associations>
 </Column>
-<Column name="Package_satus_ID_status_package" id="4B66B50D-7955-7C6C-DC25-24E7E34116C7">
+<Column name="Package_satus_ID" id="4B66B50D-7955-7C6C-DC25-24E7E34116C7">
 <createdBy>Bobby</createdBy>
 <createdTime>2020-10-17 13:24:34 UTC</createdTime>
 <generatorID>9BEA21CA-36C4-AA95-DF54-3F29B4421153</generatorID>
@@ -76,7 +77,7 @@
 <colAssociation fkAssociation="4F44C2B9-0C37-B00C-64AE-B633CB83E204" referredColumn="4DB64D26-0257-A69A-B2BF-92BE23B7CB71"/>
 </associations>
 </Column>
-<Column name="Info_package_ID_info_pakage" id="8E917484-3B78-DE5A-128A-5994C6D75AC5">
+<Column name="Info_package_ID" id="8E917484-3B78-DE5A-128A-5994C6D75AC5">
 <createdBy>Bobby</createdBy>
 <createdTime>2020-10-17 13:24:34 UTC</createdTime>
 <generatorID>A4A189A0-0E40-F5E1-5ABB-EE3BC3E51531</generatorID>
@@ -103,28 +104,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="0595980E-AA5D-6A68-1D44-6A033B6F1290"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="34A0AC50-D66C-F077-1EE4-B6BC3F738497" name="Package__IDX">
-<createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 13:24:34 UTC</createdTime>
-<ownerDesignName>Courier</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>4A9EC9F6-850F-DBC4-E0B5-7759DFECAC69</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="84252BEC-7ADD-C177-508F-058382980778"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="6481C22B-FB2E-6F32-FA8B-D2A2A37B4A60" name="Package__IDXv1">
-<createdBy>Bobby</createdBy>
-<createdTime>2020-10-17 13:24:34 UTC</createdTime>
-<ownerDesignName>Courier</ownerDesignName>
-<indexState>Unique Plain Index</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<relationGeneratorID>46FBDAB9-7C87-3F95-EB17-1D955537B35F</relationGeneratorID>
-<indexColumnUsage>
-<colUsage columnID="8E917484-3B78-DE5A-128A-5994C6D75AC5"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="AC2AA5C8-6804-218C-0B5F-28D172F92A8C" name="Package_Type_package_FK">

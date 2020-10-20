@@ -61,7 +61,7 @@
 <colAssociation fkAssociation="CB4E00DF-C877-5B17-59C8-AE753354FEF5" referredColumn="756841BE-54DA-A3FC-5604-A5B336330C05"/>
 </associations>
 </Column>
-<Column name="Transport_package_ID_transport_package" id="56297DBD-BA32-FAA2-5962-8E7B47B036E2">
+<Column name="Transp_package_ID" id="56297DBD-BA32-FAA2-5962-8E7B47B036E2">
 <createdBy>Bobby</createdBy>
 <createdTime>2020-10-17 13:24:34 UTC</createdTime>
 <generatorID>670ED145-D4E8-8F7B-88A1-4BF604C6C534</generatorID>
