@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1181.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fitHeight="802.0" fitWidth="1262.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@background_menu.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="640.0" prefWidth="204.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
+            <children>
+                <Button alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Начало">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Клиенти">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutX="1.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Пратки">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <effect>
+                <Blend />
+            </effect>
+        </AnchorPane>
+        <Pane cacheShape="false" layoutX="-8.0" layoutY="-3.0" prefHeight="60.0" prefWidth="212.0" style="-fx-background-color: #453D00;">
+            <children>
+                <Label layoutX="45.0" layoutY="16.0" style="-fx-text-fill: #FCFCFC;" text="Име Фамилия">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="624.0" prefWidth="943.0" style="-fx-background-color: #E5E5E5;">
+         <children>
+            <Label layoutX="386.0" layoutY="6.0" text="Регистрирани пратки от Име Фамилия " />
+            <TableView layoutX="1.0" layoutY="23.0" prefHeight="601.0" prefWidth="943.0">
+              <columns>
+                <TableColumn prefWidth="97.0" text="Дата рег." />
+                <TableColumn prefWidth="137.0" text="Наименование" />
+                  <TableColumn text="Вид" />
+                  <TableColumn prefWidth="70.0" text="Цена" />
+                  <TableColumn prefWidth="79.0" text="Статус" />
+                  <TableColumn prefWidth="158.0" text="Клиент" />
+                  <TableColumn prefWidth="105.0" text="От" />
+                  <TableColumn prefWidth="102.0" text="До" />
+                  <TableColumn prefWidth="114.0" text="Дата" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>
