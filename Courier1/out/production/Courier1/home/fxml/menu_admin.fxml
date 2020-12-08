@@ -50,15 +50,9 @@
                 </Label>
             </children>
         </Pane>
-<<<<<<< Updated upstream
         <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: white;">
          <children>
             <TableView layoutY="45.0" prefHeight="351.0" prefWidth="540.0">
-=======
-        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: #E5E5E5;">
-         <children>
-            <TableView layoutY="46.0" prefHeight="350.0" prefWidth="540.0">
->>>>>>> Stashed changes
               <columns>
                 <TableColumn prefWidth="105.0" text="Име на куриер" />
                 <TableColumn text="ЕГН" />
@@ -68,7 +62,6 @@
                   <TableColumn prefWidth="67.0" text="Затваря в " />
               </columns>
             </TableView>
-<<<<<<< Updated upstream
             <Label layoutX="67.0" layoutY="15.0" text="Тел. номер на куриер" />
             <TextField layoutX="196.0" layoutY="11.0" />
             <Button alignment="CENTER" layoutX="354.0" layoutY="5.0" minWidth="30.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-min-width: 100; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
@@ -76,10 +69,6 @@
                   <Font size="16.0" />
                </font>
             </Button>
-=======
-            <Label layoutX="43.0" layoutY="14.0" text="Тел. номер на куриер" />
-            <TextField layoutX="172.0" layoutY="10.0" />
->>>>>>> Stashed changes
          </children></AnchorPane>
     </children>
 </AnchorPane>
