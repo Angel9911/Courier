@@ -16,7 +16,7 @@ public class Main extends Application
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-      //  Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
         Parent root1 = FXMLLoader.load(getClass().getResource("fxml/login_client.fxml"));
         Parent root2 = FXMLLoader.load(getClass().getResource("fxml/login_admin.fxml"));
         Parent root3 = FXMLLoader.load(getClass().getResource("fxml/login_courier.fxml"));
@@ -24,7 +24,7 @@ public class Main extends Application
         Parent root5 = FXMLLoader.load(getClass().getResource("fxml/menu_admin.fxml"));
         Parent root6 = FXMLLoader.load(getClass().getResource("fxml/menu_courier.fxml"));
         primaryStage.setTitle("AB EXPRESS");
-        primaryStage.setScene(new Scene(root1, 765, 465));
+        primaryStage.setScene(new Scene(root, 765, 465));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

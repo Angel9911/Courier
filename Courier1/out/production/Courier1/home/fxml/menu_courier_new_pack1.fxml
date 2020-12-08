@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
@@ -26,12 +25,12 @@
                         <Font size="16.0" />
                     </font>
                 </Button>
-                <Button alignment="CENTER" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Фирми">
+                <Button alignment="CENTER" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Клиенти">
                     <font>
                         <Font size="16.0" />
                     </font>
                 </Button>
-                <Button alignment="CENTER" layoutX="1.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Куриери">
+                <Button alignment="CENTER" layoutX="1.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Пратки">
                     <font>
                         <Font size="16.0" />
                     </font>
@@ -50,25 +49,25 @@
                 </Label>
             </children>
         </Pane>
-        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: white;">
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: #E5E5E5;">
          <children>
-            <TableView layoutY="45.0" prefHeight="351.0" prefWidth="540.0">
-              <columns>
-                <TableColumn prefWidth="105.0" text="Име на куриер" />
-                <TableColumn text="ЕГН" />
-                  <TableColumn prefWidth="90.0" text="Тел. номер" />
-                  <TableColumn prefWidth="126.0" text="Адрес на офис" />
-                  <TableColumn prefWidth="69.0" text="Отваря в" />
-                  <TableColumn prefWidth="67.0" text="Затваря в " />
-              </columns>
-            </TableView>
-            <Label layoutX="67.0" layoutY="15.0" text="Тел. номер на куриер" />
-            <TextField layoutX="196.0" layoutY="11.0" />
-            <Button alignment="CENTER" layoutX="354.0" layoutY="5.0" minWidth="30.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-min-width: 100; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
+            <Label layoutX="183.0" layoutY="14.0" text="Информация за пратката" />
+            <DatePicker layoutX="138.0" layoutY="228.0" />
+            <Label layoutX="39.0" layoutY="182.0" text=" Изпратено от" />
+            <Label layoutX="45.0" layoutY="207.0" text="Доставка до" />
+            <Label layoutX="37.0" layoutY="232.0" text="Дата на пратка" />
+            <TextField layoutX="138.0" layoutY="77.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="138.0" layoutY="102.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="37.0" layoutY="56.0" text="Наименование" />
+            <TextField layoutX="138.0" layoutY="52.0" prefHeight="25.0" prefWidth="174.0" />
+            <Label layoutX="34.0" layoutY="81.0" text="Вид на пратката" />
+            <Label layoutX="31.0" layoutY="106.0" text="Цена на пратката" />
+            <Label layoutX="27.0" layoutY="129.0" text="Статус на пратката" />
+            <Label layoutX="39.0" layoutY="155.0" text="Тел. на клиент" />
+            <TextField layoutX="138.0" layoutY="125.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="138.0" layoutY="151.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="138.0" layoutY="178.0" prefHeight="25.0" prefWidth="174.0" />
+            <TextField layoutX="138.0" layoutY="203.0" prefHeight="25.0" prefWidth="174.0" />
          </children></AnchorPane>
     </children>
 </AnchorPane>

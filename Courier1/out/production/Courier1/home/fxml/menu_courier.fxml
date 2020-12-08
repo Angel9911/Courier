@@ -23,16 +23,16 @@
                         <Font size="16.0" />
                     </font>
                 </Button>
-                <Button alignment="CENTER" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Клиенти">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Button alignment="CENTER" layoutX="1.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Пратки">
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
+            <Button alignment="CENTER" layoutY="45.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Клиенти">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" layoutY="88.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Пратки">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
             </children>
             <effect>
                 <Blend />
