@@ -18,7 +18,7 @@
                 <Image url="@background_menu.jpg" />
             </image>
         </ImageView>
-        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="640.0" prefWidth="204.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
+        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="647.0" prefWidth="204.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
             <children>
                 <Button alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Начало">
                     <font>

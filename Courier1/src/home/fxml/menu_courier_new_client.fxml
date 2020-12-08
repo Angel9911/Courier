@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -49,12 +50,13 @@
         </Pane>
         <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: white;">
          <children>
-            <Button alignment="CENTER" layoutX="41.0" layoutY="184.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Нов клиент">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Button alignment="CENTER" layoutX="281.0" layoutY="184.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Справка">
+            <Label layoutX="144.0" layoutY="99.0" text="Име" />
+            <Label layoutX="146.0" layoutY="136.0" text="ЕГН" />
+            <Label layoutX="120.0" layoutY="169.0" text="Телефон" />
+            <TextField layoutX="192.0" layoutY="95.0" />
+            <TextField layoutX="192.0" layoutY="132.0" />
+            <TextField layoutX="192.0" layoutY="165.0" />
+            <Button alignment="CENTER" layoutX="165.0" layoutY="221.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Добави">
                <font>
                   <Font size="16.0" />
                </font>
