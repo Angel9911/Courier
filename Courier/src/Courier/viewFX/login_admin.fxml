@@ -17,9 +17,9 @@
         <Button fx:id="actionBtn" alignment="CENTER" layoutX="308.0" layoutY="391.0" mnemonicParsing="false" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Вход" />
         <Group layoutX="383.0" layoutY="488.0" />
         <Label layoutX="264.0" layoutY="320.0" text="Име" />
-        <TextField layoutX="309.0" layoutY="316.0" />
+        <TextField fx:id="adminUser" layoutX="309.0" layoutY="316.0" />
         <Label layoutX="255.0" layoutY="355.0" text="Парола" />
-        <TextField layoutX="309.0" layoutY="351.0" />
+        <TextField fx:id="adminpass" layoutX="309.0" layoutY="351.0" />
     </children>
 </AnchorPane>
 

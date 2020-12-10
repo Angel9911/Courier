@@ -9,7 +9,6 @@ import javafx.scene.control.TableView;
 
 import java.awt.*;
 import java.net.URL;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -29,13 +28,13 @@ public class AdminControllerOffice implements Initializable {
     @FXML
     private TableView OfficeView;
     @FXML
-    private TableColumn<Admin, String> id_office ;
+    private TableColumn<Admin, Integer> id_office ;
     @FXML
     private TableColumn<Admin, String> loc_office ;
     @FXML
-    private TableColumn<Admin, Long> open_office ;
+    private TableColumn<Admin, Timestamp> open_office ;
     @FXML
-    private TableColumn<Admin,Date> close_office;
+    private TableColumn<Admin,Timestamp> close_office;
     @FXML
     private TableColumn<Admin, String> name_courier ;
     @FXML
@@ -59,6 +58,15 @@ public class AdminControllerOffice implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        id_office.setCellValueFactory(cellData->cellData.getValue().OfficeIdProperty().asObject());
+        loc_office.setCellValueFactory(cellData->cellData.getValue().LocationOfficeProperty());
+        open_office.setCellValueFactory(cellData->cellData.getValue().OpenOfficeProperty());
+        close_office.setCellValueFactory(cellData->cellData.getValue().CloseOfficeProperty());
+        name_courier.setCellValueFactory(cellData->cellData.getValue().NameCourierProperty());
+        egn_courier.setCellValueFactory(cellData->cellData.getValue().EgnCourierProperty());
+        //type_pack.setCellValueFactory(cellData->cellData.getValue().TypePackProperty());
+       // status_pack.setCellValueFactory(cellData->cellData.getValue().StatusPackProperty());
+        //reg_pack.setCellValueFactory(cellData->cellData.getValue().RegistryDateProperty());
+       // sendDate_pack.setCellValueFactory(cellData->cellData.getValue().SendDateProperty());
     }
 }

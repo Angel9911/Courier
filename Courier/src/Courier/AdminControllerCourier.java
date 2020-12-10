@@ -26,7 +26,7 @@ public class AdminControllerCourier implements Initializable {
     @FXML
     private TableView CourierView;
     @FXML
-    private TableColumn<Admin, String> id_courier ;
+    private TableColumn<Admin, Integer> id_courier ;
     @FXML
     private TableColumn<Admin, String> name_courier ;
     @FXML
@@ -52,9 +52,23 @@ public class AdminControllerCourier implements Initializable {
             throw e;
         }
     }
-
+    @FXML
+    private void insert_couriers()throws SQLException,ClassNotFoundException
+    {
+        try
+        {
+         AdminDAO.insertCourier(name_c.getText(),phone_c.getText(),id_office.getText(),egn_c.getText());
+        }catch (SQLException e){
+            throw e;
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        id_courier.setCellValueFactory(cellData->cellData.getValue().CourierIdProperty().asObject());
+        name_courier.setCellValueFactory(cellData->cellData.getValue().NameCourierProperty());
+        egn_courier.setCellValueFactory(cellData->cellData.getValue().EgnCourierProperty());
+        phone_courier.setCellValueFactory(cellData->cellData.getValue().PhoneCourierProperty());
+        location_office.setCellValueFactory(cellData->cellData.getValue().LocationOfficeProperty());
+       // egn_courier.setCellValueFactory(cellData->cellData.getValue().EgnCourierProperty());
     }
 }

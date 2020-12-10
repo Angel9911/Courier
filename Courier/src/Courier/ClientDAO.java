@@ -6,7 +6,7 @@ import javafx.collections.ObservableList;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 public class ClientDAO {
-    //public String getNameCl;
+    public static String Egn;
     private static String getClientName(ResultSet rs) throws SQLException,ClassNotFoundException{
        String name = null;
         while(rs.next())
@@ -32,6 +32,23 @@ public class ClientDAO {
         }
         return clList;
     }
+    private static Client getPackOfName(ResultSet rs)throws SQLException,ClassNotFoundException
+    {
+        Client c=null;
+        if(rs.next())
+        {
+            c=new Client();
+            c.setNamePack(rs.getString("NAME_PACKAGE"));
+            c.setTypePack(rs.getString("TYPE_PACKAGE"));
+            c.setStatus_package(rs.getString("TYPE_STATUS"));
+            c.setRegistryDate(rs.getDate("DATE_REGISTRY"));
+            c.setSendDate(rs.getDate("DATE_PACKAGE"));
+            c.setSendPack(rs.getString("SENT_FROM"));
+            c.setDeliverPack(rs.getString("DELIVERED_TO"));
+            c.setPricePack(rs.getDouble("PRICE_PACKAGE"));
+        }
+        return c;
+    }
     public static ObservableList<Client> SelectAllPack (String egn_cl) throws SQLException, ClassNotFoundException {
         String selectall="SELECT P.NAME_PACKAGE,T.TYPE_PACKAGE,S.TYPE_STATUS,R.DATE_REGISTRY,I.DATE_PACKAGE,I.SENT_FROM,I.DELIVERED_TO,T.PRICE_PACKAGE \n" +
                 "FROM PACKAGE P \n" +
@@ -41,6 +58,7 @@ public class ClientDAO {
                 "INNER JOIN PACKAGE_SATUS S ON P.PACKAGE_SATUS_ID = S.ID_STATUS_PACKAGE \n" +
                 "INNER JOIN INFO_PACKAGE I ON P.INFO_PACKAGE_ID = I.ID_INFO_PAKAGE \n"+
                 "WHERE C.EGN_CLIENT='"+egn_cl+"'";
+        Egn=egn_cl;
         try {
             ResultSet rs = DBConn.executeselect(selectall);
             ObservableList<Client> c= getAllPackList(rs);
@@ -69,17 +87,17 @@ public class ClientDAO {
     }
     public static Client searchNamePack(String namepack)throws SQLException,ClassNotFoundException
     {
-        String selectNamePack="SELECT P.NAME_PACKAGER,T.TYPE_PACKAGE,S.TYPE_STATUS,DATE_REGISTRY,I.DATE_PACKAGE,I.SENT_FROM,I.DELIVERED_TO,T.PRICE_PACKAGE \n" +
-                "FROM CLIENT C \n" +
-                "INNER JOIN REGISTRY R ON R.CLIENT_ID_CLIENT = C.ID_CLIENT \n" +
-                "INNER JOIN PACKAGE P ON P.REGISTRY_ID_REGISTRY = R.ID_REGISTRY \n" +
+        String selectNamePack="SELECT P.NAME_PACKAGE,T.TYPE_PACKAGE,S.TYPE_STATUS,R.DATE_REGISTRY,I.DATE_PACKAGE,I.SENT_FROM,I.DELIVERED_TO,T.PRICE_PACKAGE \n" +
+                "FROM PACKAGE P \n" +
+                "INNER JOIN REGISTRY R ON P.REGISTRY_ID_REGISTRY = R.ID_REGISTRY \n" +
+                "INNER JOIN CLIENT C ON R.CLIENT_ID_CLIENT=C.ID_CLIENT \n"+
                 "INNER JOIN TYPE_PACKAGE T ON P.TYPE_PACKAGE_ID = T.ID_TYPE_PACKAGE \n" +
                 "INNER JOIN PACKAGE_SATUS S ON P.PACKAGE_SATUS_ID = S.ID_STATUS_PACKAGE \n" +
-                "INNER JOIN INFO_PACKAGE I ON P.INFO_PACKAGE_ID = I.ID_INFO_PAKAGE \n" +
-                "WHERE P.NAME_PACKAGE="+namepack;
+                "INNER JOIN INFO_PACKAGE I ON P.INFO_PACKAGE_ID = I.ID_INFO_PAKAGE \n"+
+                "WHERE P.NAME_PACKAGE='"+namepack+"'AND C.EGN_CLIENT='"+Egn+"'";
         try {
             ResultSet rs=DBConn.executeselect(selectNamePack);
-            Client cl=null;
+            Client cl=ClientDAO.getPackOfName(rs);
             return cl;
         }catch (SQLException e)
         {

@@ -1,15 +1,19 @@
 package home.controllers;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.fxml.FXML;
 import javafx.application.Application;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
-public class SampleController {
+public class SampleController implements Initializable {
 
 
 
@@ -41,4 +45,8 @@ public class SampleController {
     private void open_courier_login() {
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        btn_client_login.setOnAction(e->open_client_login());
+    }
 }

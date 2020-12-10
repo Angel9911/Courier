@@ -20,31 +20,31 @@
                     <Font size="19.0" />
                 </font>
             </Label>
-            <TextField  layoutY="44.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
+            <TextField  fx:id="name_c" layoutY="44.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
             <Label  layoutY="72.0" style="-fx-text-fill: #FCFCFC;" text="Въведи телефон на Куриер">
                 <font>
                     <Font size="19.0" />
                 </font>
             </Label>
-            <TextField  layoutY="100.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
+            <TextField fx:id="phone_c" layoutY="100.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
             <Label  layoutY="128.0" style="-fx-text-fill: #FCFCFC;" text="Въведи идентификационен номер на Офис">
                 <font>
                     <Font size="19.0" />
                 </font>
             </Label>
-            <TextField  layoutY="156.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
+            <TextField fx:id="id_office" layoutY="156.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
             <Label  layoutY="184.0" style="-fx-text-fill: #FCFCFC;" text="Въведи ЕГН на Куриер">
                 <font>
                     <Font size="19.0" />
                 </font>
             </Label>
-            <TextField  layoutY="212.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
-            <Button alignment="CENTER" layoutY="240.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
+            <TextField fx:id="egn_c" layoutY="212.0" prefHeight="25.0" prefWidth="203.0" promptText="Name" />
+            <Button alignment="CENTER" layoutY="240.0" mnemonicParsing="false" onAction="#insert_couriers" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
                 <font>
                     <Font size="16.0" />
                 </font>
             </Button>
-            <Button alignment="CENTER" layoutY="280.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Всички офиси">
+            <Button alignment="CENTER" layoutY="280.0" mnemonicParsing="false" onAction="#selectAllCouriers" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Всички Куриери">
                 <font>
                     <Font size="16.0" />
                 </font>
@@ -69,8 +69,8 @@
                         <TableColumn fx:id="id_courier" prefWidth="65.0" text="id_courier" />
                         <TableColumn fx:id="name_courier" prefWidth="55.0" text="name_courier" />
                         <TableColumn fx:id="egn_courier" prefWidth="52.0" text="egn_courier" />
-                        <TableColumn fx:id="Phone_courier" prefWidth="55.0" text="phone_courier" />
-                        <TableColumn fx:id="Location_office" prefWidth="58.0" text="location_office" />
+                        <TableColumn fx:id="phone_courier" prefWidth="55.0" text="phone_courier" />
+                        <TableColumn fx:id="location_office" prefWidth="58.0" text="location_office" />
                     </columns>
                 </TableView>
             </children>

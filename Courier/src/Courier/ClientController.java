@@ -1,5 +1,6 @@
 package Courier;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.sql.Date;
@@ -17,6 +19,8 @@ public class ClientController implements Initializable {
     public  String s;
     @FXML
     private Label Ime;
+    @FXML
+    private TextField namepack;
     @FXML
     private TableView ClientView;
     @FXML
@@ -51,11 +55,37 @@ public class ClientController implements Initializable {
     {
         try {
             String cl=s;
-            //Get all Employees information
             ObservableList<Client> empData = ClientDAO.SelectAllPack(cl);
-            //Populate Employees on TableView
             ShowClients(empData);
         }catch (SQLException e){
+            System.out.println("Error occurred while getting employees information from DB.\n" + e);
+            throw e;
+        }
+    }
+    @FXML
+    private void ShowCurrentPackage(Client c) throws ClassNotFoundException {
+        if (c != null) {
+            populatePackage(c);
+        }
+    }
+    @FXML
+    private void populatePackage (Client c) throws ClassNotFoundException {
+        //Declare and ObservableList for table view
+        ObservableList<Client> cData = FXCollections.observableArrayList();
+        //Add employee to the ObservableList
+        cData.add(c);
+        //Set items to the employeeTable
+        ClientView.setItems(cData);
+    }
+    @FXML
+    private void SelectPackOfName(ActionEvent actionEvent)throws SQLException,ClassNotFoundException
+    {
+        try{
+            String n=namepack.getText();
+            Client cdata=ClientDAO.searchNamePack(n);
+            ShowCurrentPackage(cdata);
+        }catch (SQLException e)
+        {
             System.out.println("Error occurred while getting employees information from DB.\n" + e);
             throw e;
         }

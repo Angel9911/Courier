@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="937.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Courier.CourierController">
+    <children>
+        <ImageView fitHeight="744.0" fitWidth="1223.0" layoutX="-2.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@background_menu.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="611.0" prefWidth="204.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
+            <children>
+                <Button alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Начало">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button alignment="CENTER" layoutY="44.0" mnemonicParsing="false" onAction="#SelectAllClients" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Клиенти">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="buttonPackage" alignment="CENTER" layoutX="1.0" layoutY="87.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Пратки">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <effect>
+                <Blend />
+            </effect>
+        </AnchorPane>
+        <AnchorPane cacheShape="false" layoutX="-8.0" layoutY="-3.0" prefHeight="60.0" prefWidth="212.0" style="-fx-background-color: #453D00;">
+            <children>
+                <Label fx:id="Ime" layoutX="45.0" layoutY="16.0" style="-fx-text-fill: #FCFCFC;" text="Име Фамилия">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="624.0" prefWidth="943.0" style="-fx-background-color: white;">
+            <children>
+                <TableView fx:id="CourierClientView" prefHeight="580.0" prefWidth="396.0">
+                    <columns>
+                        <TableColumn fx:id="name_clientColumn" prefWidth="100.0" text="Име" />
+                        <TableColumn fx:id="egn_clientColumn" minWidth="0.0" prefWidth="137.0" text="ЕГН" />
+                        <TableColumn fx:id="phone_clientColumn" minWidth="0.0" prefWidth="137.0" text="Телефон" />
+                        <TableColumn fx:id="reg_dateColumn" minWidth="0.0" prefWidth="137.0" text="Дата рег." />
+                        <TableColumn fx:id="name_packColumn" minWidth="0.0" prefWidth="137.0" text="Име на Пратка" />
+                        <TableColumn fx:id="type_packColumn" minWidth="0.0" prefWidth="137.0" text="Вид" />
+                        <TableColumn fx:id="price_TypeColumn" minWidth="0.0" prefWidth="137.0" text="Цена на колет" />
+                        <TableColumn fx:id="price_packColumn" minWidth="0.0" prefWidth="137.0" text="Цена на пратка" />
+                        <TableColumn fx:id="status_packColumn" minWidth="0.0" prefWidth="137.0" text="Статус" />
+                        <TableColumn fx:id="send_packColumn" minWidth="0.0" prefWidth="137.0" text="От" />
+                        <TableColumn fx:id="deliver_packColumn" minWidth="0.0" prefWidth="137.0" text="До" />
+                    </columns>
+                </TableView>
+                <Label layoutX="421.0" layoutY="39.0" text="Име" />
+                <TextField fx:id="nameClient" layoutX="486.0" layoutY="36.0" />
+                <Label layoutX="423.0" layoutY="66.0" text="ЕГН" />
+                <TextField fx:id="egnClient" layoutX="486.0" layoutY="62.0" />
+                <TextField fx:id="phoneClient" layoutX="486.0" layoutY="87.0" />
+                <Label layoutX="410.0" layoutY="91.0" text="Телефон" />
+                <Button alignment="CENTER" layoutX="446.0" layoutY="175.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text=" Добави Клиент">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Label layoutX="505.0" layoutY="14.0" text="Добавяне на клиент" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>

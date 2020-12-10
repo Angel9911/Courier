@@ -11,7 +11,7 @@
          <image>
             <Image url="@logo.jpg" />
          </image></ImageView>
-      <Button fx:id="btn_client_login" alignment="CENTER" layoutX="308.0" layoutY="283.0" mnemonicParsing="false" mouseTransparent="true" onAction="#open_client_login" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Потребител" />
+      <Button fx:id="btn_client_login" alignment="CENTER" layoutX="308.0" layoutY="283.0" mnemonicParsing="false" mouseTransparent="true" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Потребител" />
       <Button fx:id="btn_admin_login" alignment="CENTER" layoutX="308.0" layoutY="327.0" mnemonicParsing="false" mouseTransparent="true" onAction="#open_admin_login" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Администратор" />
       <Button fx:id="btn_courier_login" alignment="CENTER" layoutX="308.0" layoutY="369.0" mnemonicParsing="false" mouseTransparent="true" onAction="#open_courier_login" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Куриер" />
 

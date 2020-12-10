@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,14 +12,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="765.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="937.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fitHeight="483.0" fitWidth="846.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="744.0" fitWidth="1223.0" layoutX="-2.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@background_menu.jpg" />
             </image>
         </ImageView>
-        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="416.0" prefWidth="203.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
+        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="611.0" prefWidth="204.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
             <children>
                 <Button alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Начало">
                     <font>
@@ -49,15 +50,27 @@
                 </Label>
             </children>
         </Pane>
-        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: white;">
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="581.0" prefWidth="703.0" style="-fx-background-color: white;">
          <children>
-            <TableView prefHeight="396.0" prefWidth="533.0">
+            <TableView prefHeight="580.0" prefWidth="396.0">
               <columns>
-                <TableColumn prefWidth="180.0" text="Име" />
-                <TableColumn minWidth="0.0" prefWidth="174.0" text="ЕГН" />
-                  <TableColumn minWidth="0.0" prefWidth="178.0" text="Телефон" />
+                <TableColumn prefWidth="136.33334350585938" text="Име" />
+                <TableColumn minWidth="0.0" prefWidth="123.66665649414062" text="ЕГН" />
+                  <TableColumn minWidth="0.0" prefWidth="134.66665649414062" text="Телефон" />
               </columns>
             </TableView>
+            <Label layoutX="421.0" layoutY="39.0" text="Име" />
+            <TextField layoutX="486.0" layoutY="36.0" />
+            <Label layoutX="423.0" layoutY="66.0" text="ЕГН" />
+            <TextField layoutX="486.0" layoutY="62.0" />
+            <TextField layoutX="486.0" layoutY="87.0" />
+            <Label layoutX="410.0" layoutY="91.0" text="Телефон" />
+            <Button alignment="CENTER" layoutX="446.0" layoutY="175.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text=" Добави Клиент">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="505.0" layoutY="14.0" text="Добавяне на клиент" />
          </children></AnchorPane>
     </children>
 </AnchorPane>

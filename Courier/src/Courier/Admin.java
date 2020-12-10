@@ -108,12 +108,16 @@ public class Admin {
     }
 
     public void setOpenOffice(Timestamp openoffice) throws ParseException {
+       /* Date times=new Date(openoffice.getTime());
+        SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
+        String format=dateFormat.format(times);
+        Date open=dateFormat.parse(format);*/
          /*SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
          String open=dateFormat.format(openoffice);
         Date dateopen=null;
         dateopen=  dateFormat.parse(open);
         Timestamp ts=new Timestamp(dateopen.getTime());*/
-        this.open_office.setValue(openoffice);
+        this.open_office.set(openoffice);
     }
 
     public SimpleObjectProperty<Timestamp> OpenOfficeProperty(){
@@ -124,12 +128,16 @@ public class Admin {
     }
 
     public void setCloseOffice(Timestamp closeoffice) throws ParseException {
+        /*Date times=new Date(closeoffice.getTime());
+        SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
+        String format=dateFormat.format(times);
+        Date open=dateFormat.parse(format);*/
      /*   SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
         String open=dateFormat.format(closeoffice);
         Date dateclose=null;
         dateclose=  dateFormat.parse(open);
         Timestamp ts=new Timestamp(dateopen.getTime());*/
-        this.close_office.setValue(closeoffice);
+        this.close_office.set(closeoffice);
     }
 
     public SimpleObjectProperty<Timestamp> CloseOfficeProperty(){

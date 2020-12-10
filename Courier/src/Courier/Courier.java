@@ -21,6 +21,7 @@ public class Courier {
     private SimpleStringProperty send_from;
     private SimpleStringProperty deliver_to;
     private SimpleDoubleProperty price_package;
+    private SimpleDoubleProperty price_packagePrice;
    public Courier()
    {
        this.id_client=new SimpleIntegerProperty();
@@ -35,6 +36,7 @@ public class Courier {
        this.send_from=new SimpleStringProperty();
        this.deliver_to=new SimpleStringProperty();
        this.price_package=new SimpleDoubleProperty();
+       this.price_packagePrice=new SimpleDoubleProperty();
    }
    public int getClientId()
    {
@@ -248,5 +250,17 @@ public class Courier {
     public DoubleProperty PricePackProperty()
     {
         return price_package;
+    }
+    public Double getPricepackPrice()
+    {
+        return price_packagePrice.get();
+    }
+    public void setPricePackPrice(Double pricepack)
+    {
+        this.price_packagePrice.set(pricepack);
+    }
+    public DoubleProperty PricePackPropertyPrice()
+    {
+        return price_packagePrice;
     }
 }
