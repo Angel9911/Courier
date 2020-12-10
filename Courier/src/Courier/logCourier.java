@@ -36,7 +36,7 @@ public class logCourier implements Initializable {
                 scene2Controller.transferStr(inputField.getText());
                 scene2Controller.SetNameToLabel(inputField.getText());
                 stage.setTitle("AB EXPRESS");
-                stage.setScene(new Scene(root, 765, 465));
+                stage.setScene(new Scene(root, 1287, 801));
                 //stage.setResizable(false);
                 stage.show();
             } catch (IOException ex) {
