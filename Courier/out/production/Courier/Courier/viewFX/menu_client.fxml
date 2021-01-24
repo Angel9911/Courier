@@ -31,6 +31,11 @@
                         <Font size="16.0" />
                     </font>
                 </Button>
+                <Button fx:id="buttonExit" alignment="CENTER" layoutX="1.0" layoutY="130.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Изход">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
             </children>
             <effect>
                 <Blend />

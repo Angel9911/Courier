@@ -10,6 +10,7 @@ public class DBConn {
     static final String USER = "HR";
     static final String PASS = "123";
     public static Connection con;
+    public static  PreparedStatement prepStatement;
     public static Statement stmt;
 
     public static void dbConnect() throws SQLException, ClassNotFoundException {
@@ -28,6 +29,7 @@ public class DBConn {
             throw e;
         }
     }
+
     public static void dbDisconnect() throws SQLException {
         try {
             if (con != null && !con.isClosed()) {
@@ -78,6 +80,75 @@ public class DBConn {
             if (stmt != null) {
                 //Close statement
                 stmt.close();
+            }
+            //Close connection
+            dbDisconnect();
+        }
+    }
+    public static void executeinsertDate(String query,int n,String send,String delic,Date dat)throws SQLException,ClassNotFoundException {
+          prepStatement=null;
+        try{
+            dbConnect();
+            prepStatement=con.prepareStatement(query);
+            prepStatement.setInt(1,n);
+            prepStatement.setString(2,send);
+            prepStatement.setString(3,delic);
+            prepStatement.setDate(4,dat);
+            prepStatement.executeUpdate();
+        }catch (SQLException e) {
+            System.out.println("Problem occurred at executeUpdate operation : " + e);
+            throw e;
+        } finally {
+            if (prepStatement != null) {
+                //Close statement
+                prepStatement.close();
+            }
+            //Close connection
+            dbDisconnect();
+        }
+    }
+    public static void executeinsertOffice(String query,int id_off,String loc, Timestamp op,Timestamp cl)throws SQLException,ClassNotFoundException
+    {
+        prepStatement=null;
+        try {
+            dbConnect();
+            prepStatement = con.prepareStatement(query);
+            prepStatement.setInt(1,id_off);
+            prepStatement.setString(2,loc);
+            prepStatement.setTimestamp(3,op);
+            prepStatement.setTimestamp(4,cl);
+            prepStatement.executeUpdate();
+        }catch (SQLException e) {
+            System.out.println("Problem occurred at executeUpdate operation : " + e);
+            throw e;
+        } finally {
+            if (prepStatement != null) {
+                //Close statement
+                prepStatement.close();
+            }
+            //Close connection
+            dbDisconnect();
+        }
+    }
+    public static void executeinsertDateReg(String query,int idReg,int idClient,int idCourier,int idTrans,Date reg)throws SQLException,ClassNotFoundException
+    {
+        prepStatement=null;
+        try {
+            dbConnect();
+            prepStatement = con.prepareStatement(query);
+            prepStatement.setInt(1,idReg);
+            prepStatement.setDate(2,reg);
+            prepStatement.setInt(3,idClient);
+            prepStatement.setInt(4,idCourier);
+            prepStatement.setInt(5,idTrans);
+            prepStatement.executeUpdate();
+        }catch (SQLException e) {
+            System.out.println("Problem occurred at executeUpdate operation : " + e);
+            throw e;
+        } finally {
+            if (prepStatement != null) {
+                //Close statement
+                prepStatement.close();
             }
             //Close connection
             dbDisconnect();

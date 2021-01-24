@@ -3,28 +3,33 @@ package Courier;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-import java.awt.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
+
+import static Courier.Main.mainstage;
 
 public class AdminControllerOffice implements Initializable {
     @FXML
-    private TextField Location;
+    private TextField location_off;
     @FXML
-    private Timestamp open_of;
+    private ComboBox<String> open;
     @FXML
-    private Timestamp close_of;
-    @FXML
-    private Button insert;
-    @FXML
-    private Button select;
+    private ComboBox<String> close;
     @FXML
     private TableView OfficeView;
     @FXML
@@ -56,6 +61,25 @@ public class AdminControllerOffice implements Initializable {
             throw e;
         }
     }
+    @FXML
+    private void insert_Office() throws SQLException, ClassNotFoundException, ParseException {
+        try
+        {
+            String open_off=(String)open.getValue();
+            String close_off=(String)close.getValue();
+            SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
+            Date dateopen=null;
+            Date dateclose=null;
+            dateopen=  dateFormat.parse(open_off);
+            dateclose=  dateFormat.parse(close_off);
+            Timestamp ts=new Timestamp(dateopen.getTime());
+            Timestamp td=new Timestamp(dateclose.getTime());
+            int off=AdminDAO.getIdOfiice();
+            AdminDAO.insertOffice(off,location_off.getText(),ts,td);
+        }catch (ParseException e){
+            throw e;
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         id_office.setCellValueFactory(cellData->cellData.getValue().OfficeIdProperty().asObject());
@@ -68,5 +92,18 @@ public class AdminControllerOffice implements Initializable {
        // status_pack.setCellValueFactory(cellData->cellData.getValue().StatusPackProperty());
         //reg_pack.setCellValueFactory(cellData->cellData.getValue().RegistryDateProperty());
        // sendDate_pack.setCellValueFactory(cellData->cellData.getValue().SendDateProperty());
+    }
+    @FXML
+    private void loadExitSceneOffice() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("viewFX/menu_admin.fxml"));
+            Parent root = loader.load();
+            mainstage.setTitle("AB EXPRESS");
+            mainstage.setScene(new Scene(root, 765, 465));
+            mainstage.setResizable(false);
+            mainstage.show();
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
     }
 }

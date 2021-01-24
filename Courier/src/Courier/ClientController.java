@@ -4,12 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 
+import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -19,6 +21,8 @@ public class ClientController implements Initializable {
     public  String s;
     @FXML
     private Label Ime;
+    @FXML
+    private Button buttonExit;
     @FXML
     private TextField namepack;
     @FXML
@@ -78,16 +82,22 @@ public class ClientController implements Initializable {
         ClientView.setItems(cData);
     }
     @FXML
-    private void SelectPackOfName(ActionEvent actionEvent)throws SQLException,ClassNotFoundException
-    {
-        try{
-            String n=namepack.getText();
-            Client cdata=ClientDAO.searchNamePack(n);
-            ShowCurrentPackage(cdata);
-        }catch (SQLException e)
-        {
-            System.out.println("Error occurred while getting employees information from DB.\n" + e);
-            throw e;
+    private void SelectPackOfName(ActionEvent actionEvent)throws SQLException,ClassNotFoundException {
+        int brpack = 0;
+        if (namepack.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please enter name of package.");
+        } else  if(!namepack.getText().matches(".*\\p{InCyrillic}.*")){
+                JOptionPane.showMessageDialog(null, "Please enter correct name of package.");
+        }
+        else{
+            try {
+                String n = namepack.getText();
+                Client cdata = ClientDAO.searchNamePack(n);
+                ShowCurrentPackage(cdata);
+            } catch (SQLException e) {
+                System.out.println("Error occurred while getting employees information from DB.\n" + e);
+                throw e;
+            }
         }
     }
     @FXML
@@ -112,5 +122,24 @@ public class ClientController implements Initializable {
         sendDate_pack.setCellValueFactory(cellData->cellData.getValue().SendDateProperty());
         sendfrom_pack.setCellValueFactory(cellData->cellData.getValue().SendPackProperty());
         deliverto_pack.setCellValueFactory(cellData->cellData.getValue().DeliverPackProperty());
+        buttonExit.setOnAction(e-> {
+            try {
+                loadexitScene();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        });
+    }
+    private void loadexitScene() throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("viewFX/login_client.fxml"));
+            Parent root = loader.load();
+            Main.mainstage.setTitle("AB EXPRESS");
+            Main.mainstage.setScene(new Scene(root, 765, 465));
+            Main.mainstage.setResizable(false);
+            Main.mainstage.show();
+        }catch (IOException ex) {
+            System.err.println(ex);
+        }
     }
 }

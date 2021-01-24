@@ -15,6 +15,7 @@
                 <Image url="@logo.jpg" />
             </image></ImageView>
         <Button fx:id="buttonC" alignment="CENTER" layoutX="306.0" layoutY="339.0" mnemonicParsing="false" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Вход" />
+        <Button fx:id="actionBtnexit" alignment="CENTER" layoutX="306.0" layoutY="369.0" mnemonicParsing="false" style="-fx-border-color: #A0A0A0; -fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5; -fx-border-radius: 4;" text="Назад" />
         <Group layoutX="383.0" layoutY="488.0" />
         <Label layoutX="371.0" layoutY="274.0" text="ЕГН" />
         <TextField fx:id="inputField" layoutX="306.0" layoutY="303.0" />

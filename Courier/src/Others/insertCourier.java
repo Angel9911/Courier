@@ -46,6 +46,7 @@ public class insertCourier {
     }
     public static void main(String[] args) throws SQLException {
         try {
+            System.out.println(java.time.LocalDate.now());
             input_couriers();
             con.close();
         }catch(Exception se)

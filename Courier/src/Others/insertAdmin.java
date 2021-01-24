@@ -19,7 +19,7 @@ public class insertAdmin {
     }
     static void query() throws SQLException, ClassNotFoundException {
         set_connection();
-        stmt=con.prepareStatement("insert into OFFICE(ID_OFFICE,LOCATION_OFFICE,OPEN_OFFICE,CLOSE_OFFICE) \n"+
+        stmt=con.prepareStatement("insert into INFO_PACKAGE(ID_OFFICE,LOCATION_OFFICE,OPEN_OFFICE,CLOSE_OFFICE) \n"+
                 "values(?, ?, ?, ?) ");
     }
     static void input_office() throws SQLException, ClassNotFoundException, ParseException {

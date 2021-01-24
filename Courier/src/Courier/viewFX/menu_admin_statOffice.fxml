@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="1265.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Courier.AdminControllerStatOffice">
+    <children>
+        <ImageView fitHeight="920.0" fitWidth="1265.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@background_menu.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane layoutY="57.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="416.0" prefWidth="203.0" style="-fx-background-color: yellow; -fx-background-color: rgba(100, 100, 0, 0.5);">
+            <children>
+                <Button fx:id="btnClient" alignment="CENTER" layoutY="1.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0"  style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Статистика за клиенти">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button  alignment="CENTER" layoutY="44.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" onAction="#selectAllOfficeStat" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Статистика за фирма">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <effect>
+                <Blend />
+            </effect>
+        </AnchorPane>
+        <Pane cacheShape="false" layoutX="-8.0" layoutY="-3.0" prefHeight="60.0" prefWidth="212.0" style="-fx-background-color: #453D00;">
+            <children>
+                <Label fx:id="namelab" layoutX="45.0" layoutY="16.0" style="-fx-text-fill: #FCFCFC;" text="Administrator">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="350.0" prefWidth="1265.0" style="-fx-background-color: white;">
+            <children>
+                <TableView fx:id="StaticView" layoutX="-1.0" layoutY="-1.0" prefHeight="350.0" prefWidth="1265.0">
+                    <columns>
+                        <TableColumn fx:id="loc_office" prefWidth="120.0" text="Адрес на офис" />
+                        <TableColumn fx:id="brCouriers" prefWidth="105.0" text="Куриери(бр)" />
+                        <TableColumn fx:id="brClients" text="Клиенти(бр)" />
+                        <TableColumn fx:id="Polucheni_pratki" prefWidth="180.0" text="Получени пратки(бр)" />
+                        <TableColumn fx:id="Nepolucheni_pratki" prefWidth="180.0" text="Неполучени пратки(бр)" />
+                        <TableColumn fx:id="Otkazani_pratki" prefWidth="180.0" text="Отказани пратки(бр)" />
+                        <TableColumn fx:id="Percent_package" prefWidth="180.0" text="Успяваемост на пратки(%)" />
+                    </columns>
+                </TableView>
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
+

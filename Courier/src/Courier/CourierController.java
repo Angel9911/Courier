@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -17,11 +16,17 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import static Courier.Main.mainstage;
+
 public class CourierController implements Initializable {
     public  String s;
+    @FXML
+    private TextField tel_client;
     public String name;
     @FXML
     public Label Ime;
+    @FXML
+    private Button buttonExit;
     @FXML
     private Button buttonPackage;
     @FXML
@@ -54,7 +59,6 @@ public class CourierController implements Initializable {
     private TableColumn<Courier, Double>  price_TypeColumn;
     @FXML
     private TableColumn<Courier, Double>  price_packColumn;
-
     public void transferStr(String str)
     {
         //s=String.valueOf(str);
@@ -71,16 +75,29 @@ public class CourierController implements Initializable {
         }
         Ime.setText(name);
     }
+    @FXML
+    public void SetName(String st)throws ClassNotFoundException,SQLException
+    {
+        Ime.setText(st);
+    }
+    @FXML
+    public void transferLab(String st)throws ClassNotFoundException,SQLException
+    {
+        try{
+            String egn=CourierDAO.SelectEgnOfName(st);
+            s=egn;
+        }catch (SQLException | ClassNotFoundException e){
+            e.printStackTrace();
+            throw e;
+        }
+    }
     public String get_name()
     {
         return this.s;
     }
     private void populateCourier (Courier cr) throws ClassNotFoundException {
-        //Declare and ObservableList for table view
         ObservableList<Courier> crs = FXCollections.observableArrayList();
-        //Add employee to the ObservableList
         crs.add(cr);
-        //Set items to the employeeTable
         CourierClientView.setItems(crs);
     }
     private void ShowPack(Courier cr) throws ClassNotFoundException {
@@ -105,39 +122,17 @@ public class CourierController implements Initializable {
             throw e;
         }
     }
-   /* private void insert_Client(ActionEvent actionEvent) throws SQLException,ClassNotFoundException {
+    @FXML
+    private void SelectClient(ActionEvent actionEvent)throws SQLException,ClassNotFoundException
+    {
         try{
-            CourierDAO.insertClient(nameClient.getText(),egnClient.getText(),phoneClient.getText());
-
-        }catch(SQLException e){
-            throw e;
-        }
-    }
-    private void insert_Package(ActionEvent actionEvent) throws SQLException,ClassNotFoundException{
-        try {
-            CourierDAO.insertPackage(namePackage.getText(),typeID.getId(),statusID.getId(),regID.getId(),infoID.getId());
-        }catch (SQLException e){
-            throw e;
-        }
-    }
-    private void insert_Registry()throws SQLException,ClassNotFoundException
-    {
-        try {
-            CourierDAO.insertRegistry(datereg.getText(),idClient.getId(),idCourier.getId(),idTransp.getId());
-        }catch (SQLException e)
+            ObservableList<Courier> client=CourierDAO.searchClient(s,tel_client.getText());
+        }catch(SQLException e)
         {
+            System.out.println("Error occurred while getting employees information from DB.\n" + e);
             throw e;
         }
     }
-    private void insert_Info()throws SQLException,ClassNotFoundException
-    {
-        try {
-            CourierDAO.insertInfo(send_from.getText(),deliv_to.getText(),datesend.getText());
-        }catch (SQLException e)
-        {
-            throw e;
-        }
-    }*/
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         buttonPackage.setOnAction(e->loadScenePackage());
@@ -152,21 +147,28 @@ public class CourierController implements Initializable {
         status_packColumn.setCellValueFactory(cellData->cellData.getValue().SendPackProperty());
         send_packColumn.setCellValueFactory(cellData->cellData.getValue().SendPackProperty());
         deliver_packColumn.setCellValueFactory(cellData->cellData.getValue().DeliverPackProperty());
+        buttonExit.setOnAction(e-> {
+            try {
+                loadexitScene();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        });
     }
 
     private void loadScenePackage() {
         try {
-            Stage stage = new Stage();
             String st=Ime.getText();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("viewFX/menu_courier_pack.fxml"));
             Parent root = loader.load();
             CourierControllerPack scene2Controller = loader.getController();
             scene2Controller.transferStr(s);
             scene2Controller.SetNameToLabel(s);
-            stage.setTitle("AB EXPRESS");
-            stage.setScene(new Scene(root, 1181, 689));
-            stage.setResizable(false);
-            stage.show();
+            mainstage.setTitle("AB EXPRESS");
+            //Scene scene=new Scene(root,1181,689);
+            mainstage.setScene(new Scene(root,1181,689));
+            mainstage.setResizable(false);
+            mainstage.show();
         } catch (IOException ex) {
             System.err.println(ex);
         } catch (SQLException e) {
@@ -176,4 +178,16 @@ public class CourierController implements Initializable {
         }
     }
 
+    private void loadexitScene() throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("viewFX/login_courier.fxml"));
+            Parent root = loader.load();
+            Main.mainstage.setTitle("AB EXPRESS");
+            Main.mainstage.setScene(new Scene(root, 765, 465));
+            Main.mainstage.setResizable(false);
+            Main.mainstage.show();
+        }catch (IOException ex) {
+            System.err.println(ex);
+        }
+    }
 }

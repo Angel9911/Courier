@@ -13,9 +13,19 @@ public class Admin {
     private SimpleIntegerProperty id_courier;
     private SimpleStringProperty egn_courier;
     private SimpleStringProperty name_courier;
+    private SimpleStringProperty name_client;
+    private SimpleStringProperty phone_client;
     private SimpleStringProperty phone_courier;
+    private SimpleIntegerProperty brPolucheni;
+    private SimpleIntegerProperty brNePolucheni;
+    private SimpleIntegerProperty brOtkazani;
+    private SimpleIntegerProperty brCouriers;
+    private SimpleIntegerProperty brClients;
+    private SimpleDoubleProperty Percent;
     public Admin()
     {
+            this.name_client=new SimpleStringProperty();
+            this.phone_client=new SimpleStringProperty();
             this.id_office=new SimpleIntegerProperty();
             this.location_office=new SimpleStringProperty();
             this.open_office = new SimpleObjectProperty<>();
@@ -24,6 +34,36 @@ public class Admin {
             this.egn_courier=new SimpleStringProperty();
             this.name_courier=new SimpleStringProperty();
             this.phone_courier=new SimpleStringProperty();
+            this.brPolucheni=new SimpleIntegerProperty();
+            this.brNePolucheni=new SimpleIntegerProperty();
+            this.brOtkazani=new SimpleIntegerProperty();
+            this.Percent=new SimpleDoubleProperty();
+            this.brCouriers=new SimpleIntegerProperty();
+           this.brClients=new SimpleIntegerProperty();
+    }
+    public String name_client()
+    {
+        return name_client.get();
+    }
+    public void setNameClient(String nameclient)
+    {
+        this.name_client.set(nameclient);
+    }
+    public StringProperty ClientNameProperty()
+    {
+        return name_client;
+    }
+    public String phone_client()
+    {
+        return phone_client.get();
+    }
+    public void setPhoneClient(String phoneclient)
+    {
+        this.phone_client.set(phoneclient);
+    }
+    public StringProperty ClientPhoneProperty()
+    {
+        return phone_client;
     }
     public String getNameCourier()
     {
@@ -85,6 +125,7 @@ public class Admin {
     public void setPhoneCourier(String phoneCourier)
     {
         this.phone_courier.set(phoneCourier);
+
     }
     public StringProperty PhoneCourierProperty()
     {
@@ -108,15 +149,6 @@ public class Admin {
     }
 
     public void setOpenOffice(Timestamp openoffice) throws ParseException {
-       /* Date times=new Date(openoffice.getTime());
-        SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
-        String format=dateFormat.format(times);
-        Date open=dateFormat.parse(format);*/
-         /*SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
-         String open=dateFormat.format(openoffice);
-        Date dateopen=null;
-        dateopen=  dateFormat.parse(open);
-        Timestamp ts=new Timestamp(dateopen.getTime());*/
         this.open_office.set(openoffice);
     }
 
@@ -128,19 +160,87 @@ public class Admin {
     }
 
     public void setCloseOffice(Timestamp closeoffice) throws ParseException {
-        /*Date times=new Date(closeoffice.getTime());
-        SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
-        String format=dateFormat.format(times);
-        Date open=dateFormat.parse(format);*/
-     /*   SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm:ss");
-        String open=dateFormat.format(closeoffice);
-        Date dateclose=null;
-        dateclose=  dateFormat.parse(open);
-        Timestamp ts=new Timestamp(dateopen.getTime());*/
         this.close_office.set(closeoffice);
     }
-
     public SimpleObjectProperty<Timestamp> CloseOfficeProperty(){
         return close_office;
+    }
+    public int getPolucheniBr()
+    {
+
+        return brPolucheni.get();
+    }
+    public void setPolucheniBr(int polucheniBr)
+    {
+        this.brPolucheni.set(polucheniBr);
+    }
+    public IntegerProperty PolucheniBrProperty()
+    {
+        return brPolucheni;
+    }
+    public int getNePolucheniBr()
+    {
+
+        return brNePolucheni.get();
+    }
+    public void setNePolucheniBr(int NepolucheniBr)
+    {
+        this.brNePolucheni.set(NepolucheniBr);
+    }
+    public IntegerProperty NePolucheniBrProperty()
+    {
+        return brNePolucheni;
+    }
+    public int getOtkazaniBr()
+    {
+
+        return brOtkazani.get();
+    }
+    public void setOtkazaniBr(int OtkazaniBr)
+    {
+        this.brOtkazani.set(OtkazaniBr);
+    }
+    public IntegerProperty OtkazaniBrProperty()
+    {
+        return brOtkazani;
+    }
+    public int getBrCouriers()
+    {
+
+        return brCouriers.get();
+    }
+    public void setBrCouriers(int OtkazaniBr)
+    {
+        this.brCouriers.set(OtkazaniBr);
+    }
+    public IntegerProperty BrCouriersProperty()
+    {
+        return brCouriers;
+    }
+    public int getBrClients()
+    {
+
+        return brClients.get();
+    }
+    public void setBrClients(int OtkazaniBr)
+    {
+        this.brClients.set(OtkazaniBr);
+    }
+    public IntegerProperty BrClientsProperty()
+    {
+        return brClients;
+    }
+    public double getPercent()
+    {
+
+        return Percent.get();
+    }
+    public void setPercent(double percent)
+    {
+        this.Percent.set(percent);
+    }
+    public DoubleProperty PercentProperty()
+    {
+        return Percent;
     }
 }
