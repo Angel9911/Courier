@@ -61,6 +61,7 @@ public class AdminControllerStatOffice implements Initializable {
         Polucheni_pratki.setCellValueFactory(cellData -> cellData.getValue().PolucheniBrProperty().asObject());
         Nepolucheni_pratki.setCellValueFactory(cellData -> cellData.getValue().NePolucheniBrProperty().asObject());
         Otkazani_pratki.setCellValueFactory(cellData -> cellData.getValue().OtkazaniBrProperty().asObject());
+        Percent_package.setCellValueFactory(cellData->cellData.getValue().PercentProperty().asObject());
         btnClient.setOnAction(e->loadSceneClients());
     }
 

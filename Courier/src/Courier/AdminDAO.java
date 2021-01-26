@@ -51,6 +51,7 @@ public class AdminDAO {
             cl.setPolucheniBr(rs.getInt("count_p"));
             cl.setNePolucheniBr(rs.getInt("count_n"));
             cl.setOtkazaniBr(rs.getInt("count_o"));
+            cl.setPercent(rs.getDouble("count_per"));
             crList.add(cl);
         }
         return crList;
@@ -66,6 +67,7 @@ public class AdminDAO {
             cl.setPolucheniBr(rs.getInt("count_p"));
             cl.setNePolucheniBr(rs.getInt("count_n"));
             cl.setOtkazaniBr(rs.getInt("count_o"));
+            cl.setPercent(rs.getDouble("count_per"));
             crList.add(cl);
         }
         return crList;
@@ -147,7 +149,7 @@ public class AdminDAO {
     }
     public static ObservableList<Admin> selectClientsStat()throws SQLException,ClassNotFoundException
     {
-        String selectallCourier="SELECT C.NAME_CLIENT,C.PHONE_CLIENT,O.LOCATION_OFFICE,COUNT(CASE WHEN s.type_status='получена' THEN 1 END) as count_p,COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END) as count_n,COUNT(CASE WHEN s.type_status='отказана' THEN 1 END) as count_o \n"+
+        String selectallCourier="SELECT C.NAME_CLIENT,C.PHONE_CLIENT,O.LOCATION_OFFICE,COUNT(CASE WHEN s.type_status='получена' THEN 1 END) as count_p,COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END) as count_n,COUNT(CASE WHEN s.type_status='отказана' THEN 1 END) as count_o,(COUNT(CASE WHEN s.type_status='получена' THEN 1 END)*100.0)/(COUNT(CASE WHEN s.type_status='отказана' THEN 1 END)+COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END)+COUNT(CASE WHEN s.type_status='получена' THEN 1 END)) as count_per \n"+
                 "FROM CLIENT C \n"+
                 "INNER JOIN REGISTRY R ON R.CLIENT_ID_CLIENT = C.ID_CLIENT \n"+
                 "INNER JOIN PACKAGE P ON P.REGISTRY_ID_REGISTRY = R.ID_REGISTRY \n"+
@@ -167,7 +169,7 @@ public class AdminDAO {
     }
     public static ObservableList<Admin> SelectStatOffice()throws SQLException,ClassNotFoundException
     {
-        String selectallOffices="SELECT O.LOCATION_OFFICE,(SELECT COUNT(*)FROM   COURIER) AS count_cr,(SELECT COUNT(*)FROM   CLIENT) AS count_cl,COUNT(CASE WHEN s.type_status='получена' THEN 1 END) as count_p,COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END) as count_n,COUNT(CASE WHEN s.type_status='отказана' THEN 1 END) as count_o \n"+
+        String selectallOffices="SELECT O.LOCATION_OFFICE,(SELECT COUNT(*)FROM   COURIER) AS count_cr,(SELECT COUNT(*)FROM   CLIENT) AS count_cl,COUNT(CASE WHEN s.type_status='получена' THEN 1 END) as count_p,COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END) as count_n,COUNT(CASE WHEN s.type_status='отказана' THEN 1 END) as count_o,(COUNT(CASE WHEN s.type_status='получена' THEN 1 END)*100.0)/(COUNT(CASE WHEN s.type_status='отказана' THEN 1 END)+COUNT(CASE WHEN s.type_status='неполучена' THEN 1 END)+COUNT(CASE WHEN s.type_status='получена' THEN 1 END)) as count_per \n"+
                 "FROM OFFICE O \n"+
                 "INNER JOIN COURIER CR ON CR.OFFICE_ID_OFFICE = O.ID_OFFICE \n"+
                 "INNER JOIN REGISTRY R ON R.COURIER_ID_COURIER=CR.ID_COURIER \n"+

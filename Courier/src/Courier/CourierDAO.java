@@ -102,7 +102,7 @@ public class CourierDAO {
             cl.setNamePack(rs.getString("NAME_PACKAGE"));
             cl.setTypePack(rs.getString("TYPE_PACKAGE"));
             cl.setPricePack(rs.getDouble("PRICE_PACKAGE"));
-            cl.setPricePack(rs.getDouble("PRICE"));
+            cl.setPricePackPrice(rs.getDouble("PRICE"));
             cl.setStatus_package(rs.getString("TYPE_STATUS"));
             cl.setSendPack(rs.getString("SENT_FROM"));
             cl.setDeliverPack(rs.getString("DELIVERED_TO"));
@@ -415,7 +415,7 @@ public class CourierDAO {
                 "INNER JOIN TYPE_PACKAGE T ON P.TYPE_PACKAGE_ID = T.ID_TYPE_PACKAGE \n" +
                 "INNER JOIN PACKAGE_SATUS S ON P.PACKAGE_SATUS_ID = S.ID_STATUS_PACKAGE \n" +
                 "INNER JOIN INFO_PACKAGE I ON P.INFO_PACKAGE_ID = I.ID_INFO_PAKAGE \n"+
-                "WHERE CR.EGN_COURIER='"+egn_cr+"'AND CR.EGN_COURIER='"+tel_cl+"'";
+                "WHERE CR.EGN_COURIER='"+egn_cr+"'AND C.PHONE_CLIENT='"+tel_cl+"'";
         try{
             ResultSet rs=DBConn.executeselect(searchClient);
             ObservableList<Courier> client=getClientList(rs);

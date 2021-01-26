@@ -62,7 +62,7 @@ public class AdminControllerStatistics implements Initializable {
         Nepolucheni_pratki.setCellValueFactory(cellData->cellData.getValue().NePolucheniBrProperty().asObject());
         Otkazani_pratki.setCellValueFactory(cellData->cellData.getValue().OtkazaniBrProperty().asObject());
         buttonOffice.setOnAction(e->loadSceneOffice());
-      //  Percent_package.setCellValueFactory(cellData->cellData.getValue().PercentProperty().asObject());
+        Percent_package.setCellValueFactory(cellData->cellData.getValue().PercentProperty().asObject());
     }
     @FXML
     private void loadSceneOffice()

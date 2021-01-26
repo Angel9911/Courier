@@ -139,8 +139,8 @@ public class CourierControllerPack implements Initializable {
         name_packColumn.setCellValueFactory(cellData->cellData.getValue().NamePackProperty());
         type_packColumn.setCellValueFactory(cellData->cellData.getValue().TypePackProperty());
         price_packColumn.setCellValueFactory(cellData->cellData.getValue().PricePackProperty().asObject());
-        status_packColumn.setCellValueFactory(cellData->cellData.getValue().SendPackProperty());
-        name_clientColumn.setCellValueFactory(cellData->cellData.getValue().NamePackProperty());
+        status_packColumn.setCellValueFactory(cellData->cellData.getValue().StatusPackProperty());
+        name_clientColumn.setCellValueFactory(cellData->cellData.getValue().ClientNameProperty());
         send_packColumn.setCellValueFactory(cellData->cellData.getValue().SendPackProperty());
         deliver_packColumn.setCellValueFactory(cellData->cellData.getValue().DeliverPackProperty());
         buttonExit.setOnAction(e-> {

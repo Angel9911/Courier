@@ -127,11 +127,17 @@ public class CourierController implements Initializable {
     {
         try{
             ObservableList<Courier> client=CourierDAO.searchClient(s,tel_client.getText());
+            populateAllClients(client);
         }catch(SQLException e)
         {
             System.out.println("Error occurred while getting employees information from DB.\n" + e);
             throw e;
         }
+    }
+    @FXML
+    private void insertClient(ActionEvent actionEvent)throws SQLException,ClassNotFoundException
+    {
+      CourierDAO.insertClient(nameClient.getText(),egnClient.getText(),phoneClient.getText());
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

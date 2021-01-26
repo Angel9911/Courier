@@ -84,7 +84,7 @@
                 <TextField fx:id="egnClient" layoutX="93.0" layoutY="515.0" />
                 <TextField fx:id="phoneClient" layoutX="93.0" layoutY="540.0" />
                 <Label layoutX="35.0" layoutY="545.0" text="Телефон" />
-                <Button alignment="CENTER" layoutX="35.0" layoutY="570.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text=" Добави Клиент">
+                <Button alignment="CENTER" layoutX="35.0" layoutY="570.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="203.0" onAction="#insertClient" style="-fx-min-width: 150; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text=" Добави Клиент">
                     <font>
                         <Font size="16.0" />
                     </font>

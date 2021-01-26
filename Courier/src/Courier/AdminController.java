@@ -85,7 +85,7 @@ public class AdminController implements Initializable {
             Parent root = loader.load();
             AdminControllerOffice scene2Controller = loader.getController();
             mainstage.setTitle("AB EXPRESS");
-            mainstage.setScene(new Scene(root, 765, 535));
+            mainstage.setScene(new Scene(root, 820, 545));
             mainstage.setResizable(false);
             mainstage.show();
         } catch (IOException ex) {

@@ -76,7 +76,7 @@ public class logClient implements Initializable {
                     scene2Controller.transferStr(inputField.getText());
                     scene2Controller.SetNameToLabel(inputField.getText());
                     Main.mainstage.setTitle("AB EXPRESS");
-                    Main.mainstage.setScene(new Scene(root, 765, 465));
+                    Main.mainstage.setScene(new Scene(root, 985, 465));
                     Main.mainstage.setResizable(false);
                     Main.mainstage.show();
                 } catch (IOException ex) {

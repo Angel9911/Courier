@@ -9,7 +9,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="765.0" style="-fx-background-color: #E5E5E5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Courier.ClientController">
     <children>
-        <ImageView fitHeight="483.0" fitWidth="846.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="653.0" fitWidth="995.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@background_menu.jpg" />
             </image>
@@ -50,23 +50,23 @@
                 </Label>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="533.0" style="-fx-background-color: #E5E5E5;">
+        <AnchorPane layoutX="221.0" layoutY="56.0" prefHeight="396.0" prefWidth="755.0" style="-fx-background-color: white;">
             <children>
-                <TableView fx:id="ClientView"  layoutY="46.0" prefHeight="350.0" prefWidth="540.0">
+                <TableView fx:id="ClientView"  layoutY="46.0" prefHeight="350.0" prefWidth="755.0">
                     <columns>
                         <TableColumn fx:id="name_pack" prefWidth="105.0" text="Име на пратка" />
                         <TableColumn fx:id="type_pack" text="Вид пратка" />
                         <TableColumn fx:id="status_pack" prefWidth="90.0" text="Статус на пратка" />
-                        <TableColumn fx:id="reg_pack" prefWidth="126.0" text="Регистрация на пратка" />
-                        <TableColumn fx:id="sendDate_pack" prefWidth="80.0" text="Изпращане на пратка" />
-                        <TableColumn fx:id="sendfrom_pack"  prefWidth="97.0" text="От" />
-                        <TableColumn  fx:id="deliverto_pack"  prefWidth="77.0" text="До " />
-                        <TableColumn fx:id="price_pack"  prefWidth="97.0" text="Цена колет"  />
+                        <TableColumn fx:id="reg_pack" prefWidth="170.0" text="Регистрация на пратка" />
+                        <TableColumn fx:id="sendDate_pack" prefWidth="105.0" text="Изпращане на пратка" />
+                        <TableColumn fx:id="sendfrom_pack"  prefWidth="67.0" text="От" />
+                        <TableColumn  fx:id="deliverto_pack"  prefWidth="67.0" text="До " />
+                        <TableColumn fx:id="price_pack"  prefWidth="67.0" text="Цена колет"  />
                     </columns>
                 </TableView>
                 <Label layoutX="43.0" layoutY="14.0" text="Въведи пратка по избор" />
-                <TextField fx:id="namepack" layoutX="172.0" layoutY="10.0" prefHeight="25.0" prefWidth="203.0" promptText="Name"/>
-                <Button  alignment="CENTER" layoutX="354.0" layoutY="5.0" minWidth="30.0" mnemonicParsing="false" onAction="#SelectPackOfName" prefHeight="37.0" prefWidth="100.0" style="-fx-min-width: 100; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
+                <TextField fx:id="namepack" layoutX="182.0" layoutY="10.0" prefHeight="25.0" prefWidth="203.0" promptText="Name of Package"/>
+                <Button  alignment="CENTER" layoutX="390.0" layoutY="5.0" minWidth="30.0" mnemonicParsing="false" onAction="#SelectPackOfName" prefHeight="37.0" prefWidth="100.0" style="-fx-min-width: 100; -fx-text-fill: #463B03; -fx-background-color: #E5E5E5;" text="Търси">
                     <font>
                         <Font size="16.0" />
                     </font>
